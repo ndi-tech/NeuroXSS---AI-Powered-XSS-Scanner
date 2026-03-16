@@ -1,0 +1,35 @@
+# Core dependencies
+requests==2.31.0
+beautifulsoup4==4.12.2
+urllib3==2.0.7
+
+# Web and parsing
+lxml==4.9.3
+html5lib==1.1
+fake-useragent==1.4.0
+
+# AI and ML
+ollama==0.1.6
+tenacity==8.2.3
+
+# Configuration
+pyyaml==6.0.1
+python-dotenv==1.0.0
+
+# Reporting
+jinja2==3.1.2
+markdown==3.5.1
+weasyprint==60.1  # For PDF generation (optional)
+
+# Utilities
+colorama==0.4.6
+tqdm==4.66.1
+click==8.1.7
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+flask>=2.0.0  # For testing

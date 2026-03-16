@@ -1,0 +1,56 @@
+# AI-Enhanced Security Scanner Configuration
+
+scanner:
+  request_delay: 0.5  # Seconds between requests
+  max_retries: 3
+  max_pages: 20
+  timeout: 10
+  follow_redirects: true
+  respect_robots: true
+
+ai:
+  enabled: true
+  model: llama2  # or codellama, mistral, etc.
+  ollama_url: http://localhost:11434
+  timeout: 30
+  cache_responses: true
+  cache_size: 100
+  confidence_threshold: 60  # Minimum confidence to report
+
+payloads:
+  intensity: medium  # low, medium, high
+  include_encoded: true
+  include_obfuscated: true
+  custom_payloads: []
+  
+  # Intensity settings
+  low:
+    max_payloads: 10
+    skip_heavy: true
+  medium:
+    max_payloads: 25
+    skip_heavy: false
+  high:
+    max_payloads: 50
+    skip_heavy: false
+    include_fuzzing: true
+
+reporting:
+  format: html  # html, json, pdf
+  include_ai_insights: true
+  include_raw_data: false
+  company_name: "Grae-X Labs"
+  executive_summary: true
+  technical_details: true
+
+security:
+  safe_mode: true  # Don't use dangerous payloads
+  auth_required: false
+  username: null
+  password: null
+  api_key: null
+
+output:
+  report_dir: ./reports
+  log_dir: ./logs
+  temp_dir: ./temp
